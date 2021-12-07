@@ -88,4 +88,21 @@ Complete: $649 per month
 - Delivery is free
 - get access to latest recipes
 
+### Customer Testimonials
+
+Inexpensive, healthy and great-tasting meals, without even having to order manually! It feels truly magical. (Dave Bryson)
+The AI algorithm is crazy good, it chooses the right meals for me every time. It's amazing not to worry about food anymore! (Ben Jakson)
+Omnifood is a life saver! I just started a company, so there's no time for cooking. I couldn't live with my daily meals now!
+(Tiger Shorft)
+
+I got Omnifood for the whole family, and it frees so much time! Plus, everything is organic and vegan and without plastic.(Carry Lopez)
+
+### Contact information
+
+Address: 623 Harrison St., 2nd Floor, San Francisco, CA 94107
+Phone: 415-201-6370
+Email: hello@omnifood.com
+
+### Additional links
+
 ###
