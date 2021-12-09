@@ -28,6 +28,14 @@ color: #343140;
         box-sizing: border-box;
     }
     
+    *:focus {
+        outline: none;
+        /* outline: 4px dotted #eca713; */
+        /* outline-offset: 5px; */
+        box-shadow: 0 0 0 0.4rem #cf2c2c60;
+        border-radius: 6px;
+    }
+    
     html {
         font-size: 62.5%;
     }
@@ -162,6 +170,10 @@ color: #343140;
         grid-template-columns: repeat(4, 1fr);
     }
     
+    .grid--5--cols {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    
     .grid-center-vertically {
         align-items: center;
     }
@@ -177,14 +189,19 @@ color: #343140;
     /* ! HEADING BUTTON DESIGN SECTION*/
     /**********************************/
     
+    .btn,
     .btn:link,
     .btn:visited {
+        display: inline-block;
         font-size: 2rem;
         text-decoration: none;
         padding: 1.6rem 3.2rem;
         border-radius: 1rem;
         transition: all 1s;
         font-weight: 600;
+        cursor: pointer;
+        border: none;
+        font-family: inherit;
     }
     
     .btn--full:link,
@@ -204,7 +221,7 @@ color: #343140;
     }
     
     .btn--outline:link,
-    btn--outline:visited {
+    .btn--outline:visited {
         background-color: #fff;
         color: #555;
         /* ! Trick to add border inside */
@@ -692,7 +709,7 @@ color: #343140;
     /***********************************/
     
     .section-call-to-action {
-        padding: 9.6rem 0;
+        padding: 9.6rem 0 12.8rem 0;
     }
     
     .call-to-action {
@@ -702,12 +719,163 @@ color: #343140;
         background-color: #e67e22;
         box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
         border-radius: 11px;
-        background-image: linear-gradient(to right bottom, #eb984e, #e67e22);
+        overflow: hidden;
     }
     
-    .call-to-action-text-box {}
+    .call-to-action-text-box {
+        padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+        color: #2e1907;
+    }
+    
+    .call-to-action-text {
+        font-size: 1.8rem;
+        line-height: 1.8;
+        margin-bottom: 4.8rem;
+    }
+    
+    .call-to-action .heading-secondary {
+        color: #2e1907;
+        margin-bottom: 3.2rem;
+    }
     
     .call-to-action-img-box {
-        background-image: url("../img/lady-eating.jpg");
+        /* border-bottom-right-radius: 11px;
+        border-top-right-radius: 11px; */
+        background-image: linear-gradient(to right bottom, rgba(235, 151, 78, 0.25), rgba(230, 125, 34, 0.25)), url("../img/lady-eating.jpg");
         background-size: cover;
+        background-position: center;
+    }
+    
+    .call-to-action-form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 2.4rem;
+        column-gap: 3.2rem;
+    }
+    
+    .call-to-action-form label {
+        display: block;
+        font-size: 1.6rem;
+        font-weight: 500;
+        margin-bottom: 1.2rem;
+    }
+    
+    .call-to-action-form input,
+    .call-to-action-form select {
+        width: 100%;
+        color: inherit;
+        padding: 1.2rem;
+        font-size: 1.8rem;
+        font-family: inherit;
+        border: none;
+        border-radius: 0.9rem;
+        background-color: #fdf2e9;
+        box-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.1);
+    }
+    
+    .call-to-action input::placeholder {
+        color: #aaa;
+    }
+    
+    .call-to-action-form select {}
+    
+    .btn--form {
+        background-color: #45260a;
+        color: #fdf2e9;
+        align-self: end;
+        padding: 1.2rem;
+    }
+    
+    .btn--form:hover,
+    .btn--form:visited {
+        background-color: #fff;
+        color: #555;
+    }
+    
+    .call-to-action *:focus {
+        outline: none;
+        /* outline: 4px dotted #eca713; */
+        /* outline-offset: 5px; */
+        box-shadow: 0 0 0 0.4rem #dbd9d981;
+    }
+    /*************************************/
+    /* ! FOOTER DESIGN SECTION*/
+    /***********************************/
+    
+    .footer {
+        padding: 12.8rem 0;
+        border-top: 1px solid #eee;
+    }
+    
+    .grid--footer {
+        display: grid;
+        grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+    }
+    
+    .logo-col {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .footer-logo {
+        display: block;
+        margin-bottom: 3.2rem;
+    }
+    
+    .social--icon {
+        height: 2.4rem;
+        width: 2.4rem;
+    }
+    
+    .social-link {
+        list-style: none;
+        display: flex;
+        gap: 1.7rem;
+    }
+    
+    .copyright {
+        font-size: 1.4rem;
+        color: #767676;
+        line-height: 1.6;
+        margin-top: auto;
+    }
+    
+    .footer-heading {
+        font-size: 1.8rem;
+        font-weight: 500;
+        margin-bottom: 4rem;
+    }
+    
+    .address {
+        margin-bottom: 3.3rem;
+    }
+    
+    .contacts {
+        font-style: normal;
+        font-size: 1.6rem;
+        line-height: 1.6;
+    }
+    
+    .nav-col {}
+    
+    .footer-heading {}
+    
+    .footer-nav {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+    }
+    
+    .footer-link:link,
+    .footer-link:visited {
+        text-decoration: none;
+        font-size: 1.6rem;
+        color: #767676;
+        transition: all 0.3s;
+    }
+    
+    .footer-link:hover,
+    .footer-link:active {
+        color: #555;
     }
