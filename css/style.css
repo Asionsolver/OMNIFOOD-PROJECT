@@ -38,6 +38,7 @@ color: #343140;
     
     html {
         font-size: 62.5%;
+        overflow-x: hidden;
     }
     
     body {
@@ -45,6 +46,8 @@ color: #343140;
         line-height: 1;
         font-weight: 400;
         color: #555;
+        /* ! only work if there is nothing absolutely positioned in relation to body */
+        overflow-x: hidden;
     }
     /****************************/
     /* ! HEADER DESIGN SECTION*/
@@ -57,6 +60,7 @@ color: #343140;
         background-color: #fdf2e9;
         height: 9.6rem;
         padding: 0 4.8rem;
+        position: relative;
     }
     
     .logo {
@@ -65,8 +69,6 @@ color: #343140;
     /****************************/
     /* ! NAVIGATION DESIGN SECTION*/
     /****************************/
-    
-    .main-nav {}
     
     .main-nav-list {
         display: flex;
@@ -102,6 +104,23 @@ color: #343140;
     .main-nav-link.nav-last:active {
         background-color: #cf711f;
     }
+    
+    .btn-mobile-nav {
+        border: none;
+        background: none;
+        cursor: pointer;
+        display: none;
+    }
+    
+    .icon-mobile-nav {
+        height: 4.8rem;
+        width: 4.8rem;
+        color: #333;
+    }
+    
+    .icon-mobile-nav[name="close-outline"] {
+        display: none;
+    }
     /****************************/
     /* ! HEADING DESIGN SECTION*/
     /****************************/
@@ -134,7 +153,7 @@ color: #343140;
         margin-bottom: 4.8rem;
     }
     
-    .hero img {
+    .hero-img {
         width: 100%;
     }
     /*******************************/
@@ -156,6 +175,10 @@ color: #343140;
     .grid:not(:last-child) {
         /* margin-bottom: 0; */
         margin-bottom: 9.6rem;
+    }
+    
+    .grid--1--cols {
+        grid-template-columns: repeat(1, 1fr);
     }
     
     .grid--2--cols {
@@ -504,6 +527,7 @@ color: #343140;
         display: flex;
         align-items: center;
         gap: 1.6rem;
+        line-height: 1.8;
     }
     
     .list-icon {
@@ -555,7 +579,7 @@ color: #343140;
     }
     
     .testimonial-container {
-        padding: 6.6rem;
+        padding: 3.9rem;
     }
     
     .testimonial-img {
@@ -565,7 +589,7 @@ color: #343140;
     }
     
     .testimonial-text {
-        font-size: 1.8rem;
+        font-size: 1.7rem;
         line-height: 1.8;
         margin-bottom: 1.6rem;
     }
